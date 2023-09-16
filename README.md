@@ -92,7 +92,7 @@ VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ```php
 
 #pone en ejecución la aplicación se debe de agregar en el archivo "C:\Windows\System32\drivers\etc".
-php artisan serve --host=lara10-httpclientsinauth.test --port=9030
+php artisan serve --host=lara10-httpclientsinauth.test --port=9020
 
 #saldrá un mensaje similar al siguiente o el nombre de donde se inicio el server:
  INFO  Server running on [http://127.0.0.1:8000].
