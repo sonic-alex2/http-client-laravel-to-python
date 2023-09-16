@@ -3,7 +3,7 @@
     <select id="id_paciente" name="id_paciente" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         <option value="">Seleccionar</option>
         @foreach ($datos2['data'] as $item)
-            <option value="{{ $item['id_paciente'] }}">{{ $item['nombre'] }}</option>
+            <option value="{{ $item['id'] }}">{{ $item['nombre'] }}</option>
         @endforeach
     </select>
 </div>
@@ -13,7 +13,7 @@
     <select id="id_prueba" name="id_prueba" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         <option value="">Seleccionar</option>
         @foreach ($datos3['data'] as $item)
-            <option value="{{ $item['id_prueba'] }}">{{ $item['nombre'] }}</option>
+            <option value="{{ $item['id'] }}">{{ $item['nombre'] }}</option>
         @endforeach
     </select>
 </div>

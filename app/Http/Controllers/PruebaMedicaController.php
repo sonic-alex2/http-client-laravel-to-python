@@ -18,7 +18,7 @@ class PruebaMedicaController extends Controller
 
             $url = env('API_URL');
             //$response = Http::get($url."auth/salir");
-            $response = Http::timeout(60)->get($url."p-medicas");
+            $response = Http::timeout(60)->get($url."p-medicas/");
 
             if ($response->successful()) {
 
@@ -46,7 +46,7 @@ class PruebaMedicaController extends Controller
 
             $url = env('API_URL');
 
-            $response = Http::timeout(60)->post($url."p-medicas",[
+            $response = Http::timeout(60)->post($url."p-medicas/",[
                 'nombre' => $request->nombre,
                 'tipo' => $request->tipo,
                 'costo' => $request->costo,

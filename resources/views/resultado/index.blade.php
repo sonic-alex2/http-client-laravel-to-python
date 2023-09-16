@@ -38,13 +38,29 @@
             <tbody>
                 @foreach ($datos['data'] as $item)
                     <tr>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item['patient']['nombre'] }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ $item['medical_test']['nombre'] }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            @foreach ($datos2['data'] as $item2)
+                                @if ( $item['paciente_id'] == $item2['id'] )
+                                    {{ $item2['nombre'] }}
+                                @else
+                                    Error
+                                @endif
+                            @endforeach
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            @foreach ($datos3['data'] as $item3)
+                                @if ( $item['prueba_id'] == $item3['id'] )
+                                    {{ $item3['nombre'] }}
+                                @else
+                                    Error
+                                @endif
+                            @endforeach
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $item['fecha_resultado'] }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $item['resultado'] }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             {{-- <a href="{{ route('resultados.edit', $item['id_resultado']) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Editar</a> --}}
-                            <form action="{{ route('resultados.destroy', $item['id_resultado']) }}" method="POST">
+                            <form action="{{ route('resultados.destroy', $item['id']) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Eliminar</button>

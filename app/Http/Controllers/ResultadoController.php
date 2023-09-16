@@ -50,7 +50,7 @@ class ResultadoController extends Controller
 
             $url = env('API_URL');
 
-            $response = Http::timeout(60)->post($url."resultados",[
+            $response = Http::timeout(60)->post($url."resultados/",[
                 'id_paciente' => $request->id_paciente,
                 'id_prueba' => $request->id_prueba,
                 'fecha_resultado' => $request->fecha_resultado,

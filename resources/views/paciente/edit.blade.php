@@ -5,8 +5,8 @@
 
         <h2 class="text-2xl font-semibold mb-6">Editar paciente</h2>
 
-        <form action="{{ route('pacientes.update', $data['datos']['id_paciente'] ) }}" method="POST">
-            @csrf 
+        <form action="{{ route('pacientes.update', $data['datos']['id'] ) }}" method="POST">
+            @csrf
             @method('PUT')
             <div class="mb-4">
                 <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>

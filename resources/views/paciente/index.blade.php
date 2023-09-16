@@ -43,8 +43,8 @@
                         <td class="px-6 py-4 whitespace-nowrap">{{ $item['genero'] }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ $item['fecha_ingreso'] }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">
-                            <a href="{{ route('pacientes.edit', $item['id_paciente']) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Editar</a>
-                            <form action="{{ route('pacientes.destroy', $item['id_paciente']) }}" method="POST">
+                            <a href="{{ route('pacientes.edit', $item['id']) }}" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Editar</a>
+                            <form action="{{ route('pacientes.destroy', $item['id']) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Eliminar</button>

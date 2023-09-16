@@ -46,7 +46,7 @@ class PacienteController extends Controller
 
             $url = env('API_URL');
 
-            $response = Http::timeout(60)->post($url."pacientes",[
+            $response = Http::timeout(60)->post($url."pacientes/",[
                 'nombre' => $request->nombre,
                 'edad' => $request->edad,
                 'genero' => $request->genero,
